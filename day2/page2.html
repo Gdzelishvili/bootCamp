@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tailwind Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <nav class="flex flex-col sm:flex-row sm:justify-between bg-white p-4 shadow-md rounded-lg">
+        <div class="text-xl font-bold text-blue-600">My Logo</div>
+        <ul class="flex flex-col sm:flex-row gap-4 mt-2 sm:mt-0">
+            <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-blue-500">About</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="bg-blue-500 text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">
+        Focus Me
+    </button>
+    <button class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300 transition-all duration-300">
+        Smooth Effect
+    </button>
+    <button id="changeText" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+        Click Me
+    </button>
+    
+    <script>
+        document.getElementById("changeText").addEventListener("click", function () {
+            this.innerText = "Clicked!";
+            this.classList.add("bg-red-500");
+        });
+    </script>
+    
+        
+</body>
+</html>
