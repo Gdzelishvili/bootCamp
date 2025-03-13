@@ -15,7 +15,9 @@ function testScope() {
 
 testScope();
 console.log(globalVar); 
-console.log(localVar); 
+// console.log(localVar); had to comment this line whole code was crashing
+//  ex2.js:18 Uncaught ReferenceError: localVar is not defined
+// at ex2.js:18:13
 
 console.log(declaredFunction()); // isn not hoisted 
 
@@ -24,7 +26,7 @@ function declaredFunction() {
 }
 
 
-console.log(expressionFunction()); // will not work because it is expression function and when function is assigned to variable it is not hoisted
+// console.log(expressionFunction());  will not work because it is expression function and when function is assigned to variable it is not hoisted
 
 const expressionFunction = function() {
     return "I am a function expression!";
