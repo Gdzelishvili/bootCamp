@@ -8,7 +8,7 @@ increment();
 increment();
 
 // 2
-const person = { firstName: 'Nina', lastName: 'Smith', age: 29 };
+const person = { firstName: 'Nina', lastName: 'Smith', age: 66 };
 const { firstName, lastName, age } = person;
 
 const intro = `Hola, I'm ${firstName} ${lastName} and I'm ${age} years old.`;
@@ -29,4 +29,32 @@ const tasks = [
   
   const doneCount = tasks.reduce((count, task) => task.done ? count + 1 : count, 0);
   console.log('Number of Completed Tasks:', doneCount);
+
+
+// 4 mini project 
+const fetchPost = async () => {
+    const res = await fetch('https://dog.ceo/api/breeds/list/all');
+    const data = await res.json();
+    console.log('Fetched Post:', data);
+  };
+  fetchPost();
+  
+  // class
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    greet() {
+      console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+    }
+  }
+  const me = new Person('Nina', 29);
+  me.greet();
+
+  
+
+
+
+
   
